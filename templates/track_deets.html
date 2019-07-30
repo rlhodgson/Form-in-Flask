@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% block content %}
+      <table id="students">
+        <tr>
+          <th>Track Name</th>
+          <th>Difficulty Level</th>
+          <th>Conditions to watch</th>
+		  <th>Date</th>
+        </tr>
+
+	{% for track in medalists %}
+        <tr>
+          <td>{{ track.trackname}}</td>
+          <td>{{ track.difficulty}}</td>
+          <td>{{ track.conditions}}</td>
+		  <td>{{ track.date}}</td>
+        </tr>
+	{% endfor %}
+
+      </table>
+{% endblock %}
